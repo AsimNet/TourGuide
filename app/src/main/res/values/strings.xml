@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TourGuide</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="resturants">Resturants</string>
+    <string name="historical_sites">Historical sites</string>
+    <string name="hotels">Hotels</string>
+    <string name="dunes">Dunes</string>
+    <string name="buraydahTower">Buraydah Tower</string>
+    <string name="buraydahBody">One of the famous towers in Saudi Arabia</string>
+    <string name="Movenpick">Movenpick</string>
+    <string name="tulipInn">Tulip Inn</string>
+    <string name="Albaik">Albaik</string>
+    <string name="Fridays">Fridays</string>
+    <string name="Dunes">Dunes</string>
+    <string name="DunesBody">they having fun with it.</string>
+</resources>

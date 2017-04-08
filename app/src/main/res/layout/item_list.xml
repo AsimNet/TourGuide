@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="asim.net.tourguide.brain_fragment">
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/list_container_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Add cardview contents-->
+
+
+            <TextView
+                android:id="@+id/historical_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_size"
+                tools:text="AL Baik Resturants"
+
+                />
+
+            <ImageView
+                android:id="@+id/cell_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/images_height"
+                android:layout_below="@id/historical_title"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/albaik" />
+
+            <TextView
+                android:id="@+id/historical_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cell_background"
+                tools:text="Hello, test, test\n test stes\nhkjhkkh"
+                android:textSize="@dimen/body_size"
+
+                />
+            <Button
+                android:id="@+id/cell_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="call"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/cell_background"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
