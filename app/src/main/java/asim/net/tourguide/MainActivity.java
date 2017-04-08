@@ -1,6 +1,5 @@
 package asim.net.tourguide;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -13,8 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 
 
 
-public class MainActivity extends AppCompatActivity
-        implements brain_fragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity {
 
     public ViewPager viewPager;
 
@@ -32,9 +30,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-        //you can leave it empty
-    }
+
 
 }

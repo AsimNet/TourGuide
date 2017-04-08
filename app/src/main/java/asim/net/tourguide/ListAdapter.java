@@ -18,13 +18,13 @@ import java.util.ArrayList;
  * Created by asimaltwijry on 4/7/17.
  */
 
-public class ListAdapter extends ArrayAdapter<location> {
+public class ListAdapter extends ArrayAdapter<Location> {
 
-    ArrayList<location> locationsArray ;
+    ArrayList<Location> locationsArray ;
     public ListAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
     }
-    public ListAdapter(Context context, int resource, ArrayList<location> items) {
+    public ListAdapter(Context context, int resource, ArrayList<Location> items) {
         super(context, resource, items);
         locationsArray = items;
     }
@@ -37,28 +37,28 @@ public class ListAdapter extends ArrayAdapter<location> {
             view = LayoutInflater.from(getContext()).inflate(R.layout.item_list, null);
         }
 
-        location location = getItem(position);
+        Location loca = getItem(position);
 
         TextView title = (TextView) view.findViewById(R.id.historical_title);
-        title.setText(getContext().getResources().getString(location.getTitle()));
+        title.setText(getContext().getResources().getString(loca.getTitle()));
 
         TextView lowerBody = (TextView) view.findViewById(R.id.historical_body);
 
-        if (location.getMode().equals("Historical")){
+        if (loca.getMode().equals("Historical")){
             //location is historical, show the lower body
-            lowerBody.setText(getContext().getResources().getString(location.getBody()));
+            lowerBody.setText(getContext().getResources().getString(loca.getBody()));
         }else {
             lowerBody.setVisibility(View.GONE);
         }
 
 
         ImageView bgImage = (ImageView) view.findViewById(R.id.cell_background);
-        bgImage.setImageResource(location.getImage());
+        bgImage.setImageResource(loca.getImage());
 
         Button phone = (Button) view.findViewById(R.id.cell_call);
-        if (location.getMode().equals("Restaurants")){
+        if (loca.getMode().equals("Restaurants")){
             //location is a restaurant!.
-            phone.setText(location.getPhoneNumber());
+            phone.setText(loca.getPhoneNumber());
         }else {
             phone.setVisibility(View.GONE);
         }

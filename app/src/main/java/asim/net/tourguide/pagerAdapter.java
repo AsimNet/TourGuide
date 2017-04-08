@@ -69,46 +69,46 @@ public class pagerAdapter extends FragmentStatePagerAdapter {
         }
     }
 
-    public ArrayList<location> loadHotels() {
+    public ArrayList<Location> loadHotels() {
         //remove old locations.
-        ArrayList<location> locations = new ArrayList<>();
+        ArrayList<Location> Locations = new ArrayList<>();
 
 
-        locations.add(new location(R.string.Movenpick, R.mipmap.mhr, "0545847771"));
-        locations.add(new location(R.string.tulipInn, R.mipmap.tulipinn, "0545847771"));
+        Locations.add(new Location(R.string.Movenpick, 0, R.drawable.mhr_logo, R.string.mobile1,"Restaurants"));
+        Locations.add(new Location(R.string.tulipInn, 0, R.drawable.tulipinn, R.string.mobile2,"Restaurants"));
 
 
-        return locations;
+        return Locations;
     }
 
-    public ArrayList<location> loadRestuarant() {
+    public ArrayList<Location> loadRestuarant() {
         //remove old locations.
-        ArrayList<location> locations = new ArrayList<location>();
+        ArrayList<Location> Locations = new ArrayList<Location>();
 
-        locations.add(new location(R.string.Albaik, R.mipmap.albaik, "0598273344"));
-        locations.add(new location(R.string.Fridays, R.mipmap.fridays, "05498271920"));
+        Locations.add(new Location(R.string.Albaik, 0, R.drawable.albaik, R.string.mobile3,"Restaurants"));
+        Locations.add(new Location(R.string.Fridays, 0, R.drawable.fridays, R.string.mobile4,"Restaurants"));
 
-        return locations;
-
-    }
-
-    public ArrayList<location> loadHistoricalSites() {
-        //remove old locations.
-        ArrayList<location> locations = new ArrayList<location>();
-
-        locations.add(new location(R.string.buraydahTower,R.string.buraydahBody, R.mipmap.buraydahtower));
-
-        return locations;
+        return Locations;
 
     }
 
-    public ArrayList<location> loadDunes() {
+    public ArrayList<Location> loadHistoricalSites() {
         //remove old locations.
-        ArrayList<location> locations = new ArrayList<location>();
+        ArrayList<Location> Locations = new ArrayList<Location>();
 
-        locations.add(new location(R.string.Dunes,R.string.DunesBody, R.mipmap.dunes));
+        Locations.add(new Location(R.string.buraydahTower,R.string.buraydahBody, R.drawable.buraydahtower, 0,"Historical"));
 
-        return locations;
+        return Locations;
+
+    }
+
+    public ArrayList<Location> loadDunes() {
+        //remove old locations.
+        ArrayList<Location> Locations = new ArrayList<Location>();
+
+        Locations.add(new Location(R.string.Dunes,R.string.DunesBody, R.drawable.dunes, 0, "Historical"));
+
+        return Locations;
 
     }
 }
